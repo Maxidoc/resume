@@ -1,0 +1,177 @@
+<div>
+
+    <div>
+        <h1>{{name}}</h1>
+    </div>
+    <hr>
+    <br>
+    <div>
+        <p><u>Birthdate:</u> {{birthdate}}</p>
+    </div>
+    <div>
+        <p><u>Birthplace:</u> {{birthplace}}</p>
+    </div>
+    <div>
+        <p><u>Deathdate:</u> {{deathdate}}</p>
+    </div>
+    <div>
+        <p><u>Dathplace:</u> {{deathplace}}</p>
+    </div>
+    <div>
+        <p><u>Nationality:</u> {{nationality}}</p>
+    </div>
+    <div>
+        <p><u>Occupation:</u> {{occupation}}</p>
+    </div>
+    <br>
+    <hr>
+    <div> {{>title data="Known_for:"}}</div>
+    <div>
+        <ol>
+            <li>'Theory of Relativity'</li>
+            <li>'E=mc²'</li>
+            <li>'Photoelectric Effect'</li>
+            <li>'Brownian Motion'</li>
+        </ol>
+    </div>
+    <hr>
+    <div>
+        {{>title data="Education:"}}
+        <ul>
+            {{#each education}}
+            <li>
+                <u>degree:</u> {{degree}}
+            </li>
+            <li>
+                <u>field:</u> {{field}}
+            </li>
+            <li>
+                <u>institution:</u> {{institution}}
+            </li>
+            <li>
+                <u>year:</u> {{year}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h3>Notable_publications:</h3>
+        <ul>
+            {{#each notable_publications}}
+            <li>
+                {{title}}
+            </li>
+            <li>
+                {{year}}
+            </li>
+            <li>
+                {{publisher}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h3>Partners:</h3>
+        <ul>
+            {{#each partners}}
+            <li>
+                {{name}}
+            </li>
+            <li>
+                {{relationship}}
+            </li>
+            <li>
+                {{years}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    <div>
+        {{>title data="Awards:"}}
+        <ul>
+            {{#each awards}}
+            <li>
+                <u>title:</u> {{title}}
+            </li>
+            <li>
+                <u>year:</u> {{year}}
+            </li>
+            <li>
+                <u> description:</u> {{ description}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    <div>{{>title data="Influences:"}} </div>
+    <div>
+        <div>
+            <ul>
+                <li>'Isaac Newton'</li>
+                <li>'James Clerk Maxwell'</li>
+                <li>'Hermann Minkowski'</li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div>{{>title data="Influenced:"}} </div>
+    <div>
+        <ul>
+            <li>'Niels Bohr'</li>
+            <li>'Erwin Schrödinger'</li>
+            <li>'Werner Heisenberg'</li>
+            <li>'Richard Feynman'</li>
+        </ul>
+    </div>
+    <hr>
+    <div>{{>title data="Quotes:"}} </div>
+    <div>
+        <ul>
+            <li>''Imagination is more important than knowledge.''</li>
+            <li>'I have no special talent. I am only passionately curious.'</li>
+            <li>'The important thing is not to stop questioning.'</li>
+            <li>'The most beautiful thing we can experience is the mysterious. It is the source of all true art and all
+                science.'</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        {{>title data="Major_discoveries:"}}
+        <ul>
+            {{#each major_discoveries}}
+            <li>
+                <u>title:</u> {{title}}
+            </li>
+            <li>
+                <u>year:</u> {{year}}
+            </li>
+            <li>
+                <u> description:</u> {{ description}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h3>Contributions:</h3>
+        <ul>
+            {{#with contributions}}
+            <li>
+                <b>title:</b> {{title}}
+            </li>
+            <li>
+                <b>description:</b> {{description}}
+            </li>
+            <li>
+                <b>year:</b> {{description}}
+            </li>
+            <li>
+                <b>field:</b> {{field}}
+            </li>
+            {{/with}}
+        </ul>
+    </div>
+</div>
